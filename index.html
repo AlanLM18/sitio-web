@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación y Mejora de DSW</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Evaluación y Mejora de Desarrollo de Software</h1>
+            <span class="menu-icon" onclick="abrirMenu()">&#9776; Menú</span> <!-- Modificado para mostrar 'Menú' -->
+        </div>
+    </header>
+
+    <!-- Menú lateral -->
+    <nav id="menu-lateral" class="menu-lateral">
+        <a href="javascript:void(0)" class="cerrar-btn" onclick="cerrarMenu()">&times;</a>
+        <a href="#" onclick="mostrarSeccion('personal-info')">Sobre Mí</a>
+        <a href="#" onclick="mostrarSeccion('cuatri1')">1er Cuatrimestre</a>
+        <a href="#" onclick="mostrarSeccion('cuatri2')">2do Cuatrimestre</a>
+        <a href="#" onclick="mostrarSeccion('cuatri3')">3er Cuatrimestre</a>
+        <a href="#" onclick="mostrarSeccion('blog')">BLOG</a>
+        <a href="#" onclick="mostrarSeccion('portafolio')">Portafolio</a>
+    </nav>
+
+    <main>
+        <section id="personal-info" class="seccion-activa">
+            <div class="container centered">
+                <h2>Sobre Mí</h2>
+                <div class="foto-circular">
+                    <img src="imagenes/30eb781f-1b50-46d4-9508-7e3065f04599.jpg" alt="Foto personal" class="foto-perfil" onclick="mostrarImagen(this)">
+                </div>
+                <p class="text">Hola, soy Alan. Actualmente estoy estudiando en la Universidad Tecnológica de San Juan del Río la carrera de Desarrollo de Software Multiplataforma cursando el 4to cuatrimestre. Me parece una muy buena carrera la que escogí, ya que me llamó la atención las tecnologías. Además, me siento muy bien en la universidad, me gusta su infraestructura y todas las áreas verdes que tienen. En cuanto a los maestros, son muy buenos, todos tienen buenos conocimientos y saben enseñarlo. En mis tiempos libres me gusta tocar la guitarra y jugar básquetbol.</p>
+            </div>
+        </section>
+
+        <section id="cuatri1" class="seccion">
+            <div class="container">
+                <h2>1er Cuatrimestre</h2>
+                <div class="text">
+                <p class="text"> En ese cuatrimestre lo cursé en la UTEQ. Lo que aprendí fue la metodología de programación, iniciando en PSeInt y luego en Python. En esta parte, aprendí toda la lógica y los tipos de datos que se utilizan para programar, al igual que las compuertas lógicas. Por ejemplo, cuando en AND un valor es verdadero y el otro es falso, el resultado es falso. Esto me ayudó mucho en la programación. También vi fundamentos de redes, donde aprendí cómo configurar switches y routers, desde lo básico como entrar a configurar y asignar IPs con VLSM para evitar el desperdicio de las IPs. Además, aprendí cómo conectar los dispositivos a los puertos del switch y cómo ponchar los cables de red.
+                </p>
+            </div>
+            </div>
+        </section>
+
+        <section id="cuatri2" class="seccion">
+            <div class="container">
+                <h2>2do Cuatrimestre</h2>
+                <p class="text"> En este cuatrimestre, que también lo cursé en la UTEQ, aprendí programación orientada a objetos, algo más avanzado como herencia y polimorfismo, de cómo se heredan las clases para acceder a ciertos datos. También aprendí a hacer interfaces gráficas en Java con conexión a base de datos, realizando un programa que tenía que hacer un CRUD desde la programación. Además, vi diseño gráfico, donde aprendí la teoría del color, texturas, así como el significado de cada color y cómo impacta visualmente al vender proyectos. En interconexiones de redes, aprendí a configurar servicios como email y TFTP, configurar rutas estáticas y dinámicas con RIPv2, e implementar VLANS, VLSM y switches de capa 3 en un proyecto. En bases de datos SQL, aprendí a hacer mapas de entidad-relación, normalización de tablas, creación de bases de datos y consultas simples y multitablas.
+                Igual aprendi a hacer requerimientos de un proyecto y las metodologias agiles en el desarrolo de software
+                </p>
+            </div>
+        </section>
+
+        <section id="cuatri3" class="seccion">
+            <div class="container">
+                <h2>3er Cuatrimestre</h2>
+                <p>Aprendí a hacer sitios web utilizando JavaScript, HTML, CSS, ya aprendiendo tanto frontend como backend con Node.js, creando sitios con bases de datos en la nube y hosteo de sitios web. En bases de datos, aprendí a hacer consultas avanzadas con múltiples tablas, procedimientos almacenados, triggers, transacciones y seguridad en las bases de datos. También aprendí sobre el sistema operativo Linux, usando comandos para crear carpetas o archivos de texto, gestionar permisos y ejecutar máquinas virtuales en una computadora.
+                </p>
+            </div>
+        </section>
+
+        <section id="blog" class="seccion">
+            <div class="container">
+                <h2>BLOG</h2>
+                <p>Explora mi Blog dandole al boton:</p>
+                <a href="https://www.canva.com/design/DAGQ5uvXxNY/NYC2eMBlRnkk-d1qCkRtDw/view?utm_content=DAGQ5uvXxNY&utm_campaign=designshare&utm_medium=link&utm_source=editor" class="btn">Ver BLOG</a>
+            </div>
+        </section>
+
+        <section id="portafolio" class="seccion">
+            <div class="container">
+                <h2>Portafolio</h2>
+                <p>Explora mi portafolio:</p>
+                <a href="https://drive.google.com/drive/folders/1DaRhUF1cMgfpwlz8HBtWk2MmgkJo6ro2?usp=drive_link" class="btn">Ver Portafolio</a>
+            </div>
+        </section>
+    </main>
+
+    <div id="imagen-modal" class="modal">
+        <span class="cerrar" onclick="cerrarImagen()">&times;</span>
+        <img class="modal-contenido" id="imagen-agrandada">
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Evaluación y Mejora de Desarrollo de Software - Jack</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
